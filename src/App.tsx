@@ -1,9 +1,11 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import styles from './App.module.css';
+import React, { useState } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import styles from "./App.module.css";
 
 function App() {
+  const [number, setNumber] = useState<{ data: number }>();
+
   return (
     <div className="App">
       <p className={styles.test}>Test line</p>
