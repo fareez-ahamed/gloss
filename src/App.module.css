@@ -1,0 +1,6 @@
+.test {
+    composes: bg-blue from "./common.css";    
+    color: red;
+
+    
+}
