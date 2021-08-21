@@ -1,37 +1,31 @@
-import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import React from "react";
+import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import { Button } from './Button';
+import { Button } from "../components";
 
 export default {
-  title: 'Example/Button',
+  title: "Button",
   component: Button,
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
 } as ComponentMeta<typeof Button>;
 
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
+export const PrimaryButton = () => (
+  <Button variant="primary" label="Click Me!" />
+);
 
-export const Primary = Template.bind({});
-Primary.args = {
-  primary: true,
-  label: 'Button',
-};
+export const PrimaryLargeButton = () => (
+  <Button variant="primary" size="lg" label="Click Me!" />
+);
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-  label: 'Button',
-};
+export const PrimarySmallButton = () => (
+  <Button variant="primary" size="sm" label="Click Me!" />
+);
 
-export const Large = Template.bind({});
-Large.args = {
-  size: 'large',
-  label: 'Button',
-};
+export const SecondaryButton = () => (
+  <Button variant="secondary" label="Click Me!" />
+);
 
-export const Small = Template.bind({});
-Small.args = {
-  size: 'small',
-  label: 'Button',
-};
+export const DefaultButton = () => (
+  <Button variant="default" label="Click Me!" />
+);
+
+export const DangerButton = () => <Button variant="danger" label="Click Me!" />;
